@@ -14,33 +14,17 @@ Appointment booker is built with Python3 and Flask, SQL with sqlite3, HTML with 
 
 The main features of the booking system are user registration and login, creating booking calendars and sharing them with anyone who can book appointments without registration.
 
-[Screenshot: Index](readme-images/index.png)
-
 ### User registration and login
 
 As a new user registers, the password validity, unique username and e-mail validity are checked in the backend. Login is handled with Flask-Session.
-
-[Screenshot: Registration](readme-images/register.png)
-
-[Screenshot: Logging in](readme-images/login.png)
-
-[Screenshot: Front page after login](readme-images/login-index.png)
 
 ### Creating new booking calendars
 
 A new booking calendar gets an automatically generated ID. The calendar has a title and the creator can also include some additional information that is displayed for the users who book the appointments.
 
-[Screenshot: New calendar](readme-images/new-calendar.png)
-
-[Screenshot: Calendar info](readme-images/calendar-info.png)
-
 When adding appointments, the calendar creator can define a default duration for an appointment, so they don't need to calculate the duration themselves. Instead, the ending time of the appointment is calculated with JavaScript as the beginning time is inserted. When adding appointments, the backend validates that appointments do not collide with existing appointments.
 
-[Screenshot: Add appointments](readme-images/add-appointments.png)
-
 It is possible to edit the title and additional information of the calendar, and even delete the whole calendar. It is also possible to edit individual appointments (starting and ending time) and delete them.
-
-[Screenshot: Edit calendar info](readme-images/edit-calendar.png)
 
 ### Sharing the booking calendar
 
@@ -50,15 +34,9 @@ The calendar creator can share the calendar id number so that users can insert i
 
 Booking appointments is possible for anyone and doesn't require login. Calendar id or a direct link to the booking calendar are required in order to access the calendar. User insert their name and e-mail and selects one appointment from the appointment list. When they submit the form, they can see the time frame they booked, the calendar information and contact information for the calendar creator. When an appointment is booked, it will not be shown as available to other users.
 
-[Screenshot: Booking view](readme-images/booking-view.png)
-
-[Screenshot: Booking confirmation](readme-images/booking-confirmed.png)
-
 ### Viewing booked appointments
 
 The calendar creator can see the real-time booking situation when they are logged in. They calendar view displays all the appointments, and for booked appointments, participant name and e-mail link are shown.
-
-[Screenshot: List of booked and available appointments](readme-images/appointments-booked.png)
 
 ## Files
 
@@ -90,4 +68,3 @@ New features I would like to add are (for example):
 ## Conclusion
 
 This project was the first actual project I have ever created myself. I'm happy I was able to create a draft of something that in the real world would actually be useful. I have learned a lot during this process, especially about how to acquire new skills in order to create new features in my project. I'm looking forward to continuing to improve this project and apply the knowledge I have gained in many new projects in the future.
-# Appointment-Booker
