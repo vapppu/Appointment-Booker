@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My homepage
+{% endblock %}
+
+{% block main %}
+
+    <h1>Welcome back, {{ user_data["firstname"] }}!</h1>
+
+
+    <h2>My calendars</h2>
+    {% if calendars|length > 0 %}
+    <table>
+    {% for calendar in calendars %}
+        <tr><td><a href="/{{ calendar['id'] }}/appointments">{{ calendar["name"] }}</a></td></tr>
+    {% endfor %}
+    </table>
+    {% else %}
+    <p>You don't have any active booking calendars.</p>
+    {% endif %}
+
+
+    <h2>Participate</h2>
+    <p>Were you invited to book a meeting with someone? Please enter calendar ID here:</p>
+    <form method="post" action="/">
+        <input type="text" name="calendar" placeholder="ID number" required>
+        <input type="Submit" value="Go!">
+    </form>
+    <div class = "flash">
+        {% for message in get_flashed_messages() %} <p>{{ message }}</p>{% endfor %} 
+    </div>
+
+
+
+{% endblock %}

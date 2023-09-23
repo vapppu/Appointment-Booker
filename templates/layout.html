@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow|Jacques+Francois|Karla|Arvo:wght@200&display=swap|Karla|Dosis:wght@200&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap");
+    </style>
+
+    <title>Appointment booker: {% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <header class="pink">
+      <nav>
+        {% if session["user"] %}
+        <a href="/">Home</a>
+        <a href="/new_calendar">Create calendar</a>
+        <a href="/about">About us</a>
+        <a href="/logout">Log out</a>
+
+        {% else %}
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+        <a href="/about">About us</a>
+        {% endif %}
+      </nav>
+      <div class="maintitle">Appointment booker<div>
+    </header>
+
+    <main>{% block main %} {% endblock %}</main>
+    <footer>
+      CS50X Final Project by Veera Hiltunen (Helsinki, Finland)<br>
+      Layout by <a href="https://simplecss.org/">Simple CSS</a></footer>
+  </body>
+</html>

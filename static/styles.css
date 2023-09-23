@@ -1,0 +1,42 @@
+/* Global variables. */
+:root {
+  /* Set sans-serif & mono fonts */
+  --sans-font: "Karla", -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+    "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
+    "Helvetica Neue", sans-serif;
+  --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --bg: white;
+  --accent-bg: teal;
+}
+
+h1,
+.maintitle {
+  font-family: "Arvo", serif;
+}
+h1,
+h2,
+h3 {
+  color: var(--accent-bg);
+  font-family: "Arvo", serif;
+}
+.maintitle {
+  font-size: 3rem;
+  color: white;
+}
+header > nav a,
+header > nav a:visited {
+  color: white;
+}
+
+th {
+  background-color: white; /*var(--accent-bg);*/
+  font-weight: bold;
+  color: var(--accent-bg);
+}
+
+tr:nth-child(even),
+tr:nth-child(even) a {
+  /* Set every other cell slightly darker. Improves readability. */
+  background-color: var(--accent-bg);
+  color: white;
+}
