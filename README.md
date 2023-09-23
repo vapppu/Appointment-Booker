@@ -1,10 +1,12 @@
 # APPOINTMENT BOOKER - appointment booking system
 
-#### Video Demo: <https://youtu.be/rGI-LijGCcg>
+## [Video Demo](https://youtu.be/rGI-LijGCcg)
 
 ## Why?
 
 Appointment booker is a 1:1 appointment booking system. Registered users can create booking calendars, where anyone can book appointments with the calendar creator.
+
+This is my final project for the course [CS50's Introduction to Computer Science](https://cs50.harvard.edu/x/2022/).
 
 ## Technologies
 

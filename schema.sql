@@ -19,7 +19,7 @@ CREATE TABLE calendar (
     FOREIGN KEY (owner_id)
         REFERENCES user(id)     
     );
-    CREATE TABLE appointment (
+CREATE TABLE appointment (
     id INTEGER PRIMARY KEY,
     calendar_id INT NOT NULL,
     starting_time TEXT NOT NULL,
